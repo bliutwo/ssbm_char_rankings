@@ -3,6 +3,12 @@
 Example usage:
 
 ```
+python3 count.py ssbmrankings2023.txt
+```
+
+Example output:
+
+```
 ➜  count_chars python3 count.py ssbmrankings2023.txt
 Rankings based on ssbmrankings2023.txt
 
