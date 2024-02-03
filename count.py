@@ -2,6 +2,9 @@ import argparse
 import json
 from statistics import mean
 
+def calculate_secondary_placement(placement):
+    return 1 + 0.5 * placement
+
 def pretty_print(o):
     print(json.dumps(o, indent=2))
 
@@ -54,7 +57,7 @@ for index, line in enumerate(lines):
             char_counts[char] = 1
         if char not in char_placements:
             char_placements[char] = []
-        char_placements[char].append(index * (secondary_placement+1))
+        char_placements[char].append(index * calculate_secondary_placement(secondary_placement))
 
 char_average_placements = {}
 
